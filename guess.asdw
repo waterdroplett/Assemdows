@@ -1,0 +1,23 @@
+; number guessing game
+.equ MAX, 100
+prompt: .string "Guess a number from 1 to 100: "
+low:    .string "Too low!\n"
+high:   .string "Too high!\n"
+win:    .string "You got it!\n"
+
+    RAND R0, MAX        ; 0 to 99
+    INC R0              ; 1 to 100
+loop:
+    PRINTS prompt
+    INPUT R1
+    CMP R1, R0
+    JE done
+    JL toolow
+    PRINTS high
+    JMP loop
+toolow:
+    PRINTS low
+    JMP loop
+done:
+    PRINTS win
+    HALT

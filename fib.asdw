@@ -1,0 +1,14 @@
+; first 15 Fibonacci numbers
+    MOV R0, 0       ; a
+    MOV R1, 1       ; b
+    MOV R2, 15      ; how many are left
+loop:
+    PRINT R0
+    MOV R3, R0
+    ADD R3, R1
+    MOV R0, R1
+    MOV R1, R3
+    DEC R2
+    CMP R2, 0
+    JG loop
+    HALT

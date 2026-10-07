@@ -1,0 +1,18 @@
+; recursive factorial using CALL, PUSH and POP
+    MOV R0, 10
+    CALL fact
+    PRINT R0            ; 3628800
+    HALT
+
+fact:
+    CMP R0, 1
+    JG recurse
+    MOV R0, 1
+    RET
+recurse:
+    PUSH R0
+    DEC R0
+    CALL fact
+    POP R1
+    MUL R0, R1
+    RET

@@ -1,0 +1,33 @@
+; bubble sort an array in memory, then print it
+.equ N, 8
+nums: .word 42, 7, 19, 3, 88, 23, 1, 56
+
+    MOV R0, N
+    DEC R0              ; R0 = comparisons left in this pass
+outer:
+    MOV R1, 0           ; i
+inner:
+    MOV R4, R1
+    INC R4              ; i + 1
+    LOAD R2, [nums+R1]
+    LOAD R3, [nums+R4]
+    CMP R2, R3
+    JLE noswap
+    STORE [nums+R1], R3
+    STORE [nums+R4], R2
+noswap:
+    INC R1
+    CMP R1, R0
+    JL inner
+    DEC R0
+    CMP R0, 0
+    JG outer
+
+    MOV R1, 0
+show:
+    LOAD R2, [nums+R1]
+    PRINT R2
+    INC R1
+    CMP R1, N
+    JL show
+    HALT

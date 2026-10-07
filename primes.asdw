@@ -1,0 +1,24 @@
+; all primes up to LIMIT, by trial division
+.equ LIMIT, 50
+
+    MOV R0, 2           ; n, the number being tested
+next:
+    MOV R1, 2           ; d, the divisor
+check:
+    MOV R2, R1
+    MUL R2, R2
+    CMP R2, R0
+    JG isprime          ; d*d > n, so n is prime
+    MOV R3, R0
+    MOD R3, R1
+    CMP R3, 0
+    JE notprime         ; divisible by d
+    INC R1
+    JMP check
+isprime:
+    PRINT R0
+notprime:
+    INC R0
+    CMP R0, LIMIT
+    JLE next
+    HALT
