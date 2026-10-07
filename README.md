@@ -43,6 +43,8 @@ Options: `--trace` (print each instruction as it runs), `--regs` (show registers
 
 `v` means a register or a value. `a, b` in `CMP` can be either too.
 
+Full documentation: [DOCS.md](DOCS.md)
+
 ## Memory and data
 
 There are 65,536 memory cells, each holding one integer. Data directives fill memory from address 0:
