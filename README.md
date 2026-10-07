@@ -43,7 +43,7 @@ Options: `--trace` (print each instruction as it runs), `--regs` (show registers
 
 `v` means a register or a value. `a, b` in `CMP` can be either too.
 
-Full documentation: [DOCS.md](DOCS.md)
+Full documentation: [Docs.md](Docs.md)
 
 ## Memory and data
 
