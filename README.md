@@ -73,5 +73,9 @@ address, empty stack, running past the end without `HALT`) print the line that c
 
 ## VS Code
 
-Copy `assemdows.tmLanguage.json` into the extension's `syntaxes` folder, replacing the old one,
-then restart VS Code.
+Download "assemdows-v*.vsix" and go to VS Code > Extensions > Options > Download from VSIX > select the file.
+Then restart VS Code.
+
+## Images
+
+![Assemdows running the sort example](images/fibasdwexp.png)
