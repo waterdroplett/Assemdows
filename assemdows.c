@@ -1,6 +1,6 @@
 /*
  * Assemdows - a small assembly-style language
- * Copyright (C) 2026 Your Name
+ * Copyright (C) 2026 waterdroplett
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
